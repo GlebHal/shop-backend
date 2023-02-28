@@ -30,7 +30,7 @@ export const register = async (req, res) => {
 		const salt = await bcrypt.genSalt(saltRounds);
 		const passwordHash = await bcrypt.hash(req.body.password, salt);
 
-		const newUser = await new modelsObj.user({
+		const newUser = new modelsObj.user({
 			login: req.body.login,
 			email: req.body.email,
 			passwordHash,
@@ -42,6 +42,6 @@ export const register = async (req, res) => {
 
 		res.status(200).json({ message: 'Registered', token });
 	} catch (err) {
-		res.status(400).json({ error: 'Registration was failed' });
+		res.status(500).json({ error: 'Registration was failed' });
 	}
 };

@@ -21,7 +21,6 @@ const app = express();
 app.use(express.json());
 
 app.post('/login', validation.loginValidator, validation.checkErrors, controllers.auth.login);
-
 app.post('/register', validation.registerValidator, validation.checkErrors, controllers.auth.register);
 
 app.get('/', controllers.user.getAll);

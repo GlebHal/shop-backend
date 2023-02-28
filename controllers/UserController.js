@@ -71,7 +71,7 @@ export const updateOrder = async (req, res) => {
 	}
 };
 
-export const removeOrder = async (req, res) => {
+export const removeOrders = async (req, res) => {
 	try {
 		const doc = await modelsObj.order.deleteMany({ user: req.params.userId });
 
