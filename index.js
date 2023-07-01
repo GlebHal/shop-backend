@@ -27,7 +27,7 @@ app.get('/', controllers.user.getAll);
 app.get('/:id', controllers.user.getOne);
 app.post('/cart/:userId', isAuth, controllers.user.makeOrder);
 app.patch('/cart/:userId', isAuth, controllers.user.updateOrder);
-app.delete('/cart/:userId', isAuth, controllers.user.removeOrder);
+app.delete('/cart/:userId', isAuth, controllers.user.removeOrders);
 
 app.listen(config.serverPort, () => {
 	console.log('Server has been started');
