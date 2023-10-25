@@ -3,7 +3,7 @@ In this express.js app I made shop backend logic where users can register/login 
 
 ## How to start
 
-### `git clone https://github.com/TsugaruBurst/ExpressJS-Shop-Backend.git`
+### `git clone https://github.com/Haguel/ExpressJS-Shop-Backend.git`
 ### `cd ExpressJS-Shop-Backend`
 ### `npm install`
 Edit .env file
